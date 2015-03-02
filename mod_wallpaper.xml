@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension 	
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Stockmar Wallpaper</name>
+	<author>Jeppe Stockmar</author>
+	<creationDate>January 2013</creationDate>
+	<copyright>Copyright (C)2013 Jeppe Stockamr</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>info@stockmar.dk</authorEmail>
+	<authorUrl>www.stockmar.dk</authorUrl>
+	<version>1.0.2</version>
+	<description>
+		<![CDATA[
+	<div>
+		<img src="../templates/stockmartemplate/img/stockmar-logo.png" />
+		<h1>Stockmar Wallpaper</h1>
+		<p>A very simple wallpaper module for you from Stockmaer IT</p>
+		<p>Built upon <a href="http://srobbin.com/jquery-plugins/backstretch/" target="_blank">backstretch</a></p>
+		<p><img src="../modules/mod_wallpaper/mod_wallpaper_preview.png" /></p>
+		<h2>Change log</h2>
+		<h3>v. 1.0.2</h3>
+		<ul>
+			<li>Updated jquery.backstretch.min 2.0.3 to 2.0.4</li>
+			<li>added backstretch for dev: jquery.backstretch.js</li>
+		<ul>
+	</div>	
+	<p>Created by <a href="http://www.stockmar.dk" target="_blank">Jeppe Rosengren Stockmar | stockmar.dk</a>.</p>
+	]]>
+		
+	</description>
+	<files>
+		<folder>js</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>'
+		<filename module="mod_wallpaper">mod_wallpaper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_wallpaper.xml</filename>
+		<filename>helper.php</filename>
+		<filename>mod_wallpaper_preview.png</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB.mod_wallpaper.ini</language>
+		<language tag="en-GB">language/en-GB.mod_wallpaper.sys.ini</language>
+	</languages>
+	<!-- Media files -->
+	<media destination="mod_wallpaper" folder="media">
+		<folder>js</folder>
+	</media>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field label="SETUP_INFO_LABEL" type="spacer" class="instructions blue" default="SETUP_INFO"/>
+
+				<field 
+					name="wallpaperType" 
+					label="Select the wallpaper type" 
+					type="radio" 
+					default="1" 	
+					description="" 
+					class="radio btn-group">
+					<option value="1">Wallpaper</option>
+				  	<option value="2">Slideshow</option>
+				</field>
+				<field label="IMAGES_INFO_LABEL" type="spacer" class="instructions blue" default="IMAGE_INFO"/>
+				<field 
+					name="wallpaperStatic" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default="" 
+					label="MOD_WALLPAPER_STATIC_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field 
+					label="IMAGES_INFO_LABEL" 
+					type="spacer" 
+					class="instructions blue" 
+					default="IMAGE_INFO"/>
+
+				<field 
+					name="wallpaperone" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default="" 
+					label="MOD_WALLPAPER_ONE_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field 
+					name="wallpapertwo" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default="" 
+					label="MOD_WALLPAPER_TWO_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field 
+					name="wallpaperthree" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default=""
+					label="MOD_WALLPAPER_THREE_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field 
+					name="wallpaperfour" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default="" 
+					label="MOD_WALLPAPER_FOUR_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field 
+					name="wallpaperfive" 
+					type="imagelist" 
+					hide_none="true" 
+					directory="/images/wallpapers" 
+					default="" 
+					label="MOD_WALLPAPER_FIVE_LABEL" 
+					description="MOD_WALLPAPER_DESC">
+				</field>
+				<field type="spacer" name="myspacer-one-break" hr="true" />
+			</fieldset>
+			<fieldset name="SLIDESHOW">
+				<field 
+					label="SLIDESHOW_INFO_LABEL" 
+					type="spacer" 
+					class="instructions blue" 
+					default="SETUP_INFO"/>
+				<field 
+					name="fadeSpeed" 
+					type="text" 
+					default="500" 
+					label="MOD_FADE_SPEED_LABEL" 
+					description="" 
+					size="4" />
+				<field 
+					name="duration" 
+					type="text" 
+					default="3000" 
+					label="MOD_DURATION_LABEL" 
+					description="" 
+					size="4" />
+				<field 
+					name="random" 
+					type="radio" 
+					default="0" 
+					label="MOD_RAMDOMIMAGE_LABEL" 
+					description="MOD_RAMDOMIMAGE_DESC" 
+					class="btn-group">
+  					<option value="0">JNO</option>
+  					<option value="1">JYES</option>
+  				</field>
+			</fieldset>	
+		</fields>
+	</config>
+</extension>
